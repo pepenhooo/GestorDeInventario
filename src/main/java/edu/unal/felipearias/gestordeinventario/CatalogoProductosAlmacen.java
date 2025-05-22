@@ -35,7 +35,7 @@ public class CatalogoProductosAlmacen {
             return;
         }
         for (Producto producto : productosPorSku) {
-            System.out.println(producto); // Usa el método toString() de Producto.
+            System.out.println(producto);
         }
         System.out.println("----------------------------------------------");
     }
@@ -60,7 +60,6 @@ public class CatalogoProductosAlmacen {
         catalogo.agregarProducto(new Producto("SKU003", "Cinta Metrica", 8.75, 200, "A3-S1"));
         catalogo.agregarProducto(new Producto("SKU007", "Brocas", 15.00, 75, "A2-S1"));
 
-        // Intentar agregar un duplicado (será ignorado por TreeSet).
         System.out.println("Intentando agregar SKU001 de nuevo: " + catalogo.agregarProducto(new Producto("SKU001", "Otro Destornillador", 20.00, 40, "A2-S3")));
 
         catalogo.listarTodosLosProductos();
@@ -71,8 +70,7 @@ public class CatalogoProductosAlmacen {
         System.out.println("\nEliminando Producto con SKU005: " + catalogo.eliminarProductoPorSku("SKU005"));
         catalogo.listarTodosLosProductos();
 
-        catalogo.encontrarProductosEnRangoSku("SKU003", "SKU007"); // Rango inclusivo.
-        catalogo.encontrarProductosEnRangoSku("SKU001", "SKU004"); // Rango inclusivo.
-    }
+        catalogo.encontrarProductosEnRangoSku("SKU003", "SKU007");
+        catalogo.encontrarProductosEnRangoSku("SKU001", "SKU004");
 }
 
