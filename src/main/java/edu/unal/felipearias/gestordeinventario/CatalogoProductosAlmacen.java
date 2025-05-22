@@ -3,7 +3,7 @@ import java.util.TreeSet;
 import java.util.Comparator;
 
 public class CatalogoProductosAlmacen {
-    private TreeSet<Producto> productosPorSku; // Usamos TreeSet para ordenación por SKU.
+    private TreeSet<Producto> productosPorSku;
 
     public CatalogoProductosAlmacen() {
         this.productosPorSku = new TreeSet<>();
